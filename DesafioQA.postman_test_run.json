@@ -1,0 +1,116 @@
+{
+	"id": "71695289-9e7c-4b72-97e4-c97c9231acb1",
+	"name": "DesafioQA",
+	"timestamp": "2021-02-09T02:03:05.595Z",
+	"collection_id": "b17e53fa-5de1-4998-a672-2de9f4ca1104",
+	"folder_id": 0,
+	"environment_id": "bdce1c86-f089-476c-bdce-bdcdee746af9",
+	"totalPass": 8,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "cb944e8b-21f2-435e-93a1-b800c646a3ff",
+			"name": "Create employee",
+			"url": "http://dummy.restapiexample.com/api/v1/create",
+			"time": 837,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response must be valid and have a body": true,
+				"Validate information and displayed message": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate information and displayed message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				837
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response must be valid and have a body": true,
+					"Validate information and displayed message": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "1fbb6467-1b7e-4d81-bdf6-71a277b802f0",
+			"name": "Delete employee",
+			"url": "http://dummy.restapiexample.com/api/v1/delete/4410",
+			"time": 930,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response must be valid and have a body": true,
+				"Validate displayed message": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate displayed message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				930
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response must be valid and have a body": true,
+					"Validate displayed message": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1767,
+	"collection": {
+		"requests": [
+			{
+				"id": "cb944e8b-21f2-435e-93a1-b800c646a3ff",
+				"method": "POST"
+			},
+			{
+				"id": "1fbb6467-1b7e-4d81-bdf6-71a277b802f0",
+				"method": "DELETE"
+			}
+		]
+	}
+}

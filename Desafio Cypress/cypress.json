@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://automationpractice.com/index.php",
+  "chromeWebSecurity": false,
+  "env": {
+    "email": "deborabacelar@gec.inatel.br",
+    "firstName": "debora",
+    "lastName": "bacelar",
+    "password": "SenhaSecreta123"
+  }
+}

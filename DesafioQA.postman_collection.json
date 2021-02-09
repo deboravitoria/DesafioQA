@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b17e53fa-5de1-4998-a672-2de9f4ca1104",
+		"name": "DesafioQA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const name = pm.environment.get(\"name\");\r",
+							"const salary = pm.environment.get(\"salary\");\r",
+							"const age = pm.environment.get(\"age\");\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () { \r",
+							"    pm.response.to.have.status(200);\r",
+							"    var jsonData = pm.response.json();\r",
+							"    const employeeId = jsonData.data.id;\r",
+							"    pm.environment.set(\"employeeId\", employeeId);\r",
+							"});\r",
+							"pm.test(\"Response must be valid and have a body\", function () {\r",
+							"    pm.response.to.be.ok;\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Validate information and displayed message\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.status).to.eql(\"success\");\r",
+							"  pm.expect(responseJson.data.name).to.eql(name);\r",
+							"  pm.expect(responseJson.data.salary).to.eql(salary);\r",
+							"  pm.expect(responseJson.data.age).to.eql(age);\r",
+							"  pm.expect(responseJson.message).to.eql(\"Successfully! Record has been added.\")\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function(){\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"salary\":\"{{salary}}\",\r\n    \"age\":\"{{age}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/create",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const employeeId = pm.environment.get(\"employeeId\").toString();\r",
+							"pm.test(\"Status code is 200\", function () { \r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response must be valid and have a body\", function () {\r",
+							"    pm.response.to.be.ok;\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"pm.test(\"Validate displayed message\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.status).to.eql(\"success\");\r",
+							"  pm.expect(responseJson.data).to.eql(employeeId);\r",
+							"  pm.expect(responseJson.message).to.eql(\"Successfully! Record has been deleted\")\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function(){\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000)\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/delete/{{employeeId}}",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"delete",
+						"{{employeeId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "employee_id",
+			"value": ""
+		}
+	]
+}
