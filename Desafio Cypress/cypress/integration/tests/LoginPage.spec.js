@@ -19,6 +19,8 @@ describe('Login test', function(){
     login.fillEmailAddress(`${Cypress.env('invalidEmail')}`)
     login.fillPassword(`${Cypress.env('password')}`)
     login.submit()
+    cy.get('#center_column > :nth-child(2) > p').contains('there is 1 error', { matchCase: false }) //testando erro da página para validar se o login falhou
+    cy.get('ol > li').contains('Invalid email address.', { matchCase: false }) //testando se a mensagem de erro ao efetuar login está correta
   })
 
   it('Valid login test', function(){

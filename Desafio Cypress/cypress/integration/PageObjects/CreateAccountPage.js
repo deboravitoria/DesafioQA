@@ -36,7 +36,7 @@ class CreateAccountPage {
     addressField.type(address)
     return this
   }
-  fillcity(city){
+  fillCity(city){
     const cityField = cy.get('[id=city')
     cityField.clear()
     cityField.type(city)
@@ -44,16 +44,18 @@ class CreateAccountPage {
   }
   fillState(){
     const stateField = cy.get('[id=id_state]')
-    stateField.click()
-  }
-  fillCountry(){
-    const countryField = cy.get('[id=id_country]')
-    countryField.click()
+    stateField.select('Alabama')
+    return this
   }
   fillCep(cep){
     const cepField = cy.get('[id=postcode')
     cepField.clear()
     cepField.type(cep)
+    return this
+  }
+  fillCountry(){
+    const countryField = cy.get('[id=id_country]')
+    countryField.select('United States')
     return this
   }
   fillMobilePhone(phone){
