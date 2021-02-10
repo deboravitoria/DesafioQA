@@ -15,8 +15,8 @@ O email e a senha são salvos no arquivo cypress.json dentro de env para que o m
 Para visualizar o vídeo do teste de login abra o arquivo "\DesafioQA\Desafio Cypress\cypress\videos\tests"
 
 Obs.: 
-No teste extra de signup após dar submit no email a página troca a URL e o teste se quebra, como essa parte
-seria apenas um plus decidi deixar também para análise, mas infelizmente não está funcionando 100%.
+No teste extra de signup após dar submit no email a página troca a URL e o teste se quebra (posso explicar melhor o problema caso necessário),
+como essa parte seria apenas um plus decidi deixar também para análise, mas infelizmente não está funcionando 100%.
 
 
 Desafio postman:
