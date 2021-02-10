@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-02-09T23:50:07.908Z",
+    "end": "2021-02-09T23:50:33.566Z",
+    "duration": 15193,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bd7e8cd5-1d0d-4968-80e1-d230bd312e0f",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\LoginPage.spec.js",
+      "file": "cypress\\integration\\tests\\LoginPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9cd3bd5-9007-4879-b6fc-20a6a7c3cc62",
+          "title": "Login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Blank login",
+              "fullTitle": "Login test Blank login",
+              "timedOut": null,
+              "duration": 6476,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = new _LoginPage[\"default\"]();\nlogin.visit();\nlogin.submit();",
+              "err": {},
+              "uuid": "cb0ee745-4f42-48cf-9fc9-ebdf5a20bec2",
+              "parentUUID": "d9cd3bd5-9007-4879-b6fc-20a6a7c3cc62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Invalid login test",
+              "fullTitle": "Login test Invalid login test",
+              "timedOut": null,
+              "duration": 4258,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = new _LoginPage[\"default\"]();\nlogin.visit();\nlogin.fillEmailAddress(\"\".concat(Cypress.env('invalidEmail')));\nlogin.fillPassword(\"\".concat(Cypress.env('password')));\nlogin.submit();",
+              "err": {},
+              "uuid": "b88014a8-ead2-4526-9312-80b8daf14d2e",
+              "parentUUID": "d9cd3bd5-9007-4879-b6fc-20a6a7c3cc62",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Valid login test",
+              "fullTitle": "Login test Valid login test",
+              "timedOut": null,
+              "duration": 4459,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = new _LoginPage[\"default\"]();\nlogin.visit();\nlogin.fillEmailAddress(\"\".concat(Cypress.env('email')));\nlogin.fillPassword(\"\".concat(Cypress.env('password')));\nlogin.submit();",
+              "err": {},
+              "uuid": "89d11a9c-47c8-4c5a-b7a2-50e76f190039",
+              "parentUUID": "d9cd3bd5-9007-4879-b6fc-20a6a7c3cc62",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cb0ee745-4f42-48cf-9fc9-ebdf5a20bec2",
+            "b88014a8-ead2-4526-9312-80b8daf14d2e",
+            "89d11a9c-47c8-4c5a-b7a2-50e76f190039"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15193,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

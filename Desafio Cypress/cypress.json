@@ -3,8 +3,20 @@
   "chromeWebSecurity": false,
   "env": {
     "email": "deborabacelar@gec.inatel.br",
+    "password": "SenhaSecreta123",
+    "invalidEmail": "deborabacelar",
     "firstName": "debora",
-    "lastName": "bacelar",
-    "password": "SenhaSecreta123"
-  }
+    "lastName": "bacelar"
+  },
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  },
+  "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
 }

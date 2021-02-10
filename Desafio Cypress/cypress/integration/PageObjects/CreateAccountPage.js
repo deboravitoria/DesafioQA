@@ -24,14 +24,47 @@ class CreateAccountPage {
     passwordField.type(password)
     return this
   }
-  selectBirthDate(){
-    const dayField = cy.get('[id=days]')
-    dayField.click()
-    // const selectDay = cy.get('[id=]')
+  fillCompany(company){
+    const companyField = cy.get('[id=company')
+    companyField.clear()
+    companyField.type(company)
+    return this
   }
-  // submit(){
-  //   const button = cy.get('[id=SubmitCreate]')
-  //   button.click()
-  // }
+  fillAddress(address){
+    const addressField = cy.get('[id=address1')
+    addressField.clear()
+    addressField.type(address)
+    return this
+  }
+  fillcity(city){
+    const cityField = cy.get('[id=city')
+    cityField.clear()
+    cityField.type(city)
+    return this
+  }
+  fillState(){
+    const stateField = cy.get('[id=id_state]')
+    stateField.click()
+  }
+  fillCountry(){
+    const countryField = cy.get('[id=id_country]')
+    countryField.click()
+  }
+  fillCep(cep){
+    const cepField = cy.get('[id=postcode')
+    cepField.clear()
+    cepField.type(cep)
+    return this
+  }
+  fillMobilePhone(phone){
+    const phoneField = cy.get('[id=phone_mobile')
+    phoneField.clear()
+    phoneField.type(phone)
+    return this
+  }
+  submit(){
+    const button = cy.get('[id=submitAccount]')
+    button.click()
+  }
 }
 export default CreateAccountPage
